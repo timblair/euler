@@ -1,19 +1,6 @@
-module Problem007
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'ruby', 'helper')
 
-  def prime?
-    return true if self == 2
-    return false if (self < 2 || self % 2 == 0)
-    return true if self < 9
-    return false if (self % 3 == 0)
-    r = (self**0.5).floor
-    f = 5
-    while (f <= r) do
-      return false if self % f == 0
-      return false if self % (f+2) == 0
-      f += 6
-    end
-    true
-  end
+module Problem007
 
   # returns the nth prime (e.g. 46.prime gives the 46th prime number => 199)
   def prime

@@ -1,13 +1,6 @@
-module Problem003
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'ruby', 'helper')
 
-  def prime?
-    return true if self == 2
-    return false if (self < 2 || self % 2 == 0)
-    (2..self**0.5+1).each do |n|
-      return false if self.to_f % n == 0
-    end
-    true
-  end
+module Problem003
 
   def max_prime_factor
     return self if self.prime?

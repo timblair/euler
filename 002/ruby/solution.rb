@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'ruby', 'helper')
+
 module Problem002
 
   def to_fibonacci
@@ -15,12 +17,6 @@ end
 
 class Integer
   include Problem002
-end
-
-class Array
-  def sum
-    inject(0) { |sum,x| sum + x }
-  end
 end
 
 # calculate Fibonacci sequence then sum all the even numbers

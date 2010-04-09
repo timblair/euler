@@ -1,9 +1,8 @@
+require File.join(File.dirname(__FILE__), '..', '..', 'lib', 'ruby', 'helper')
+
 class Array
   def pythagorean_triplet?
     return self[0]**2 + self[1]**2 == self[2]**2
-  end
-  def product
-    inject(1) { |p,x| p * x }
   end
 end
 
@@ -21,4 +20,4 @@ triplets = []
 end
 
 puts triplets.inspect
-puts "Product of #{triplets.first.inspect} = #{triplets.first.product}" if !triplets.first.nil?
+puts "Product of #{triplets.first.inspect} = #{triplets.first.multiply}" if !triplets.first.nil?
